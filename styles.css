@@ -1,0 +1,348 @@
+/********w************
+    
+	Project 4 Javascript
+	Name: James Hamilton
+	Date: April 26th, 2023
+	Description: A webpage for musican Steve Hamilton.
+
+*********************/
+
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Libre Baskerville', serif;
+}
+
+header {
+    height:100px;
+    height: 125px;
+    width:100%;
+}
+
+#headerLogo {
+   margin-left:10px;
+   width: 210px;
+   float:left;
+   color:#0b1106;
+   text-decoration: none;
+}
+
+#navBar  {
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    height:115px;
+}
+
+#navBar ul {
+    display: flex;
+    width: 85%;
+    list-style: none;
+    justify-content: space-around;
+}
+
+#navBar ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 120%;
+}
+
+#headerLogo h1 {
+    font-size: 40px;
+}
+
+header h2 {
+    font-size: 13px;
+    font-style: Italic;
+    font-weight: lighter;
+}
+
+#quotes p {
+    position: relative;
+    text-align: center;
+    margin-top:60px;
+    text-align: center;
+    padding-left: 150px;
+    padding-right:150px;
+    font-weight:Lighter;
+    line-height: 25px;;
+}
+
+#indexSpotifySection {
+    display: flex;
+    justify-content: center;
+}
+
+#spotify {
+    margin-top:60px;
+    width:50%;
+    margin-bottom:60px;
+}
+
+#indexFooterNav {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+    
+}
+
+#indexFooterNav ul {
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+    width:400px;
+    padding:10px;
+    font-size:0.9em
+}
+
+#indexFooterNav ul li a { 
+    text-decoration: none;
+    color: black;
+}
+
+#indexMain img {
+    width: 100%;
+    max-height: 100%; 
+}
+
+#indexFooterNav a:hover,
+#indexFooterNav a:focus {
+    color:rgb(233, 167, 25);
+    transition: 0.5s; 
+    font-size: 1.1em;  
+}
+
+#navBar a:hover,
+#navBar a:focus {
+    color:rgb(233, 167, 25);
+    transition: 0.5s;
+    font-size: 1.3em;
+}
+
+/* Biography Page */
+#longBio {
+    margin:40px 20px 0px 30px;
+    padding:20px;
+    line-height:25px;
+    border:3px solid rgb(233, 167, 25);
+    border-radius: 25px;
+    box-shadow: 0px 10px 13px -7px #000000;
+}
+
+#bioGallery {
+    display:flex;
+    margin:80px 20px 0px 30px;
+    justify-content: space-between;
+    margin-bottom:40px;
+}
+
+#bioGallery img {
+    width: 33%;
+    box-shadow: 0px 10px 13px -7px #000000;
+    border-radius: 25px;
+}
+
+#mainBio h1 {
+    text-align: center;
+}
+
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+     }
+}
+
+.fadeInEffect {
+    animation: fadeInAnimation ease 4s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+/* Music Page */
+#mainMusic h1{
+    text-align: center;
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+#album {
+    display:flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 10px;
+    height: 600px;
+}
+
+#spotifyMusic {
+   width: 430px;
+   height:430px;
+}
+
+#album img {
+    float:left;
+    width:430px;
+    box-shadow: 0px 10px 13px -7px #000000;
+}
+
+#albumDescription h2 {
+    text-align: center;
+    font-size: 20px;
+    margin-bottom:30px;
+}
+
+#albumDescription p {
+    margin:40px 20px 0px 30px;
+    padding:20px;
+    line-height:25px;
+    border:3px solid rgb(233, 167, 25);
+    border-radius: 25px;
+    box-shadow: 0px 10px 13px -7px #000000;
+    margin-bottom: 20px;
+}
+
+/* Contact Page */
+#mainContact h1 {
+    text-align: center;
+    font-size: 30px;
+    margin-top:20px;
+}
+
+#mainContact p {
+    text-align: center;
+    margin-top:40px;
+}
+
+#contact-form {
+    text-align: center;
+    margin-top:70px;
+    border:3px solid rgb(233, 167, 25);
+    border-radius: 25px;
+    box-shadow: 0px 10px 13px -7px #000000;
+    width: 80%;
+    height: 600px;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 30px;
+}
+
+#contact-form ul {
+    margin-top: 100px;
+}
+
+#contact-form ul li {
+    margin-top: 25px;
+    list-style-type: none;
+}
+
+#contact-form ul li label {
+    position:relative;
+    right: 30px;
+}
+
+#comments {
+   position: relative;
+    right: 20px;
+    resize: none;
+}
+
+#buttons button {
+    width: 100px;
+    margin: 20px;
+    margin-top: 40px;
+    height: 30px;
+}
+
+.error {
+    color:red;
+}
+
+/*Media query to make images horizontal */
+@media (max-width:825px) {
+    #bioGallery {
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    #bioGallery img {
+        width:100%;
+        margin-bottom:15px;
+    }
+
+    #album {
+        flex-direction: column;
+    }
+
+    #spotifyMusic {
+        margin-top: 10px;
+    }
+
+    #albumDescription h2 {
+        margin-top: 20px;
+    }
+}
+
+/* Media Query for mobile */
+@media (max-width:530px) {
+	
+	#headerLogo h1 {
+        font-size: 25px;
+    }
+
+    #headerLogo h2 {
+        font-size: 0.6em;
+    }
+
+    header {
+        height: 90px;
+    }
+
+    #navBar li {
+        font-size: 0.6em;
+        margin-right: 40px;
+    }
+
+    #quotes p {
+        font-size: 0.8em;
+        padding-left: 5px;
+        padding-right:5px;
+    }
+
+    #indexFooterNav li a {
+        font-size: 0.7em;
+    }
+
+    /* Biography page */
+    #longBio p {
+        font-size:0.8em;
+        margin-top: 0px;
+    }
+
+    #mainBio h1 {
+        font-size: 0.96em;
+    }
+
+    /* Music page */
+    #mainMusic h1 {
+        font-size: 0.9em;
+    }
+    
+    #albumDescription h2 {
+        font-size: 0.9em;
+    }
+
+    #mainContact h1 {
+        font-size: 0.9em;
+    }
+
+    #mainContact p {
+        font-size: 0.9em;
+    }
+}

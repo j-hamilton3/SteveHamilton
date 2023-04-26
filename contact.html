@@ -1,0 +1,65 @@
+<!--------w-----------
+
+    Project 4
+    Name: James Hamilton
+    Date: April 26th, 2023
+    Description: A contact page for musician Steve Hamilton.
+
+--------------------->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Steve Hamilton || Contact</title>
+        <link rel="stylesheet" type="text/css" href="styles.css">
+        <script src="script.js"></script>
+    </head>
+    <body>
+        <header>
+            <a href="index.html">
+                <div id="headerLogo">
+                    <h1>Steve <br> Hamilton</h1>
+                    <h2>Bassist. Composer. Educator.</h2>
+                </div>
+            </a>
+            <nav id="navBar">
+                <ul>
+                    <li><a href="biography.html">Biography</a></li>
+                    <li><a href="music.html">Music</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main id="mainContact">
+            <h1 class="fadeInEffect">Contact Steve</h1>
+            <p>Please enter the following:</p>
+            <form id="contact-form" action="index.html" method="post">
+                <ul>
+                    <li><label for="name">Name:</label><input type="text" id="name" name="name"></li>
+                    <li class="error" id="name_error">*Please enter a name.</li>
+                    <li><label for="email">Email:</label><input type="text" id="email" name="email"></li>
+                    <li class="error" id="email_error">*Please enter an email.</li>
+                    <li class="error" id="emailformat_error">*Please enter a valid email.</li>
+                    <li><label for="phone">Phone:</label><input type="tel" id="phone" name="phone"></li>
+                    <li class="error" id="phone_error">*Please enter a phone number.</li>
+                    <li class="error" id="phoneformat_error">*Please enter a valid phone number.</li>
+                    <li><label for="comments">Comments:</label><textarea id="comments" name="comments"></textarea></li>
+                </ul>
+                <div id="buttons">
+                    <button type="submit">Submit</button>
+                    <button type="reset">Reset</button>
+                </div>
+            </form>
+        </main>
+        <footer id="indexFooterNav">
+            <ul>
+                <li><a href="index.html">| Home |</a></li>
+                <li><a href="biography.html">| Biography |</a></li>
+                <li><a href="music.html">| Music |</a></li>
+                <li><a href="contact.html">| Contact |</a></li>
+              </ul>
+        </footer>
+    </body>
+</html>
